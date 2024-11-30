@@ -1,0 +1,218 @@
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.add-series-form {
+    position: relative;
+    top: -30px;
+    width: 30%;
+    height: 100%;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-series-form h2 {
+    margin-bottom: 10px;
+}
+
+.mb-3 input, .mb-3 textarea, .mb-3 button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 4px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    height: 40px;
+    margin: 5px;
+}
+
+.mb-3 textarea {
+    height: 80px;
+}
+
+#series-category {
+    height: 50px;
+    margin: 0px;
+}
+
+.series-container {
+    position: relative;
+    width: 100%;
+    top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.series-card {
+    width: 100px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    height: 120px;
+    transition: transform 0.3s ease;
+}
+
+.series-card img {
+    width: 100%;
+    height: 60%;
+    object-fit: fill;
+}
+
+.series-card h4 {
+    margin: 10px 0;
+}
+
+.series-card:hover {
+    transform: scale(1.2);
+}
+
+.series-details {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    max-width: 800px;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    z-index: 1000;
+    display: none;
+    max-height: 100vh;
+    overflow-y: hidden;
+    word-wrap: break-word;
+    background-color: #343434;
+}
+
+.series-details.active {
+    display: block;
+    transition: 0.5s;
+}
+
+.series-details .par {
+    display: flex;
+    justify-content:space-between;
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.5; /* التحكم في المسافة بين الأسطر */
+    width: 100%; /* عرض العنصر */
+    height: 120px; /* ارتفاع العنصر */
+    overflow: scroll; /* السماح بالتمرير في كلا الاتجاهين */
+    scrollbar-width: none; /* إخفاء الشريط في المتصفحات الحديثة مثل Firefox */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 1px 1px 1px #eee;
+    border-radius: 10px;
+    color:white;
+
+}
+.par .child{
+    overflow: scroll; /* السماح بالتمرير في كلا الاتجاهين */
+    scrollbar-width: none;
+    flex:1;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 5px;
+}
+.first_line{
+    color:white;
+    background:#333;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom:1px solid rgb(253, 252, 252);
+    }
+
+
+.series-details img {
+    position: relative;
+    width: 30%;
+    left:35%;
+    height: auto;
+    max-height: 250px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.series-details h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color:#fefefe
+}
+
+.series-details .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.series-details .edit-btn, .series-details .delete-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar {
+    position: relative;
+    width: 70%;
+    top: -60px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.search-bar input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* تصميم القائمة المنسدلة */
+.year-selector {
+    margin: 10px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.year-selector label {
+    font-size: 16px;
+    margin-right: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+#year-select {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+#year-select:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#year-select:focus {
+    outline: none;
+    box-shadow: 0 0 4px #4caf50;
+    border-color: #4caf50;
+}
+

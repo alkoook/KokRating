@@ -1,0 +1,13 @@
+.parent{
+    display: flex;
+    justify-content: center;
+}
+.movie,.series{
+    width:50%;
+    height: 90vh;
+    border-radius:20px;
+    background-color:#eee;
+    margin:0 10px;
+    position: relative;
+
+}
